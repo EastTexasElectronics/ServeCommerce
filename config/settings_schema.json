@@ -1,3 +1,7 @@
+/** 
+* This file defines the structure and types of settings that will be available in the Shopify Theme Editor > Theme Settings.
+* To change change the content of what is rendered see the `/locales` folder.
+**/
 [
   {
     "name": "theme_info",

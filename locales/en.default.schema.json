@@ -1,3 +1,6 @@
+/** 
+* This file is used for localization and defining labels, descriptions, and other text content for theme settings in a * specific language (in this case, English). 
+**/
 {
   "settings_schema": {
     "global": {

@@ -1,3 +1,8 @@
+/** 
+* This file is where you can change the content for the Online Store > Edit Default Theme Content
+* This content is defined in the `config/settings_schema.json` file.
+**/
+
 {
   "general": {
     "password_page": {
