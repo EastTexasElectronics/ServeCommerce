@@ -1,84 +1,297 @@
 {% comment %}
   Renders social icons.
+
   Accepts:
-  - class: {String} a class to be added to the <ul> element (optional).
+  - class: {String} (optional) - Custom class for the <ul> element.
 
   Usage:
-  {% render 'social-icons',
-    class: 'my-class'
-  %}
+  {% render 'social-icons', class: 'my-class' %}
+
+  Configuration:
+  - Manage social media links in the Shopify admin under theme settings.
+  - Icons are defined in snippets like `icon-facebook.liquid` in `/snippets/`.
+  - Update links and content in `/locales/en.default.json`.
+  - Schema defined in `/config/settings_schema.json`.
 {% endcomment %}
 
-<ul class="list-unstyled list-social{% if class %} {{ class}}{% endif %}" role="list">
+<ul class="list-unstyled list-social{% if class %} {{ class }}{% endif %}" role="list">
+  {%- if settings.social_bitbucket_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_bitbucket_link }}"
+        class="link list-social__link"
+        aria-label="Bitbucket"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-bitbucket' -%}
+        <span class="visually-hidden">{{ 'general.social.links.bitbucket' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_discord_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_discord_link }}"
+        class="link list-social__link"
+        aria-label="Discord"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-discord' -%}
+        <span class="visually-hidden">{{ 'general.social.links.discord' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_facebook_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_facebook_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_facebook_link }}"
+        class="link list-social__link"
+        aria-label="Facebook"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {%- render 'icon-facebook' -%}
         <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_github_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_github_link }}"
+        class="link list-social__link"
+        aria-label="GitHub"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-github' -%}
+        <span class="visually-hidden">{{ 'general.social.links.github' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_gitlab_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_gitlab_link }}"
+        class="link list-social__link"
+        aria-label="GitLab"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-gitlab' -%}
+        <span class="visually-hidden">{{ 'general.social.links.gitlab' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_instagram_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_instagram_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_instagram_link }}"
+        class="link list-social__link"
+        aria-label="Instagram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {%- render 'icon-instagram' -%}
         <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
       </a>
     </li>
   {%- endif -%}
-  {%- if settings.social_youtube_link != blank -%}
+  {%- if settings.social_linkedin_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_youtube_link }}" class="link list-social__link">
-        {%- render 'icon-youtube' -%}
-        <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+      <a
+        href="{{ settings.social_linkedin_link }}"
+        class="link list-social__link"
+        aria-label="LinkedIn"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-linkedin' -%}
+        <span class="visually-hidden">{{ 'general.social.links.linkedin' | t }}</span>
       </a>
     </li>
   {%- endif -%}
-  {%- if settings.social_tiktok_link != blank -%}
+  {%- if settings.social_meta_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_tiktok_link }}" class="link list-social__link">
-        {%- render 'icon-tiktok' -%}
-        <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
-      </a>
-    </li>
-  {%- endif -%}
-  {%- if settings.social_twitter_link != blank -%}
-    <li class="list-social__item">
-      <a href="{{ settings.social_twitter_link }}" class="link list-social__link">
-        {%- render 'icon-twitter' -%}
-        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+      <a
+        href="{{ settings.social_meta_link }}"
+        class="link list-social__link"
+        aria-label="Meta"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-meta' -%}
+        <span class="visually-hidden">{{ 'general.social.links.meta' | t }}</span>
       </a>
     </li>
   {%- endif -%}
   {%- if settings.social_pinterest_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_pinterest_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_pinterest_link }}"
+        class="link list-social__link"
+        aria-label="Pinterest"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {%- render 'icon-pinterest' -%}
         <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_reddit_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_reddit_link }}"
+        class="link list-social__link"
+        aria-label="Reddit"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-reddit' -%}
+        <span class="visually-hidden">{{ 'general.social.links.reddit' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_snapchat_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_snapchat_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_snapchat_link }}"
+        class="link list-social__link"
+        aria-label="Snapchat"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {%- render 'icon-snapchat' -%}
         <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_telegram_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_telegram_link }}"
+        class="link list-social__link"
+        aria-label="Telegram"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-telegram' -%}
+        <span class="visually-hidden">{{ 'general.social.links.telegram' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_tiktok_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_tiktok_link }}"
+        class="link list-social__link"
+        aria-label="TikTok"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-tiktok' -%}
+        <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_tumblr_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_tumblr_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_tumblr_link }}"
+        class="link list-social__link"
+        aria-label="Tumblr"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {%- render 'icon-tumblr' -%}
         <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
       </a>
     </li>
   {%- endif -%}
+  {%- if settings.social_twitch_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_twitch_link }}"
+        class="link list-social__link"
+        aria-label="Twitch"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-twitch' -%}
+        <span class="visually-hidden">{{ 'general.social.links.twitch' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_twitter_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_twitter_link }}"
+        class="link list-social__link"
+        aria-label="Twitter"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-twitter' -%}
+        <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
   {%- if settings.social_vimeo_link != blank -%}
     <li class="list-social__item">
-      <a href="{{ settings.social_vimeo_link }}" class="link list-social__link">
+      <a
+        href="{{ settings.social_vimeo_link }}"
+        class="link list-social__link"
+        aria-label="Vimeo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {%- render 'icon-vimeo' -%}
         <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_wechat_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_wechat_link }}"
+        class="link list-social__link"
+        aria-label="WeChat"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-wechat' -%}
+        <span class="visually-hidden">{{ 'general.social.links.wechat' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_whatsapp_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_whatsapp_link }}"
+        class="link list-social__link"
+        aria-label="WhatsApp"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-whatsapp' -%}
+        <span class="visually-hidden">{{ 'general.social.links.whatsapp' | t }}</span>
+      </a>
+    </li>
+  {%- endif -%}
+  {%- if settings.social_youtube_link != blank -%}
+    <li class="list-social__item">
+      <a
+        href="{{ settings.social_youtube_link }}"
+        class="link list-social__link"
+        aria-label="YouTube"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {%- render 'icon-youtube' -%}
+        <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
       </a>
     </li>
   {%- endif -%}

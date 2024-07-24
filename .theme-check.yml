@@ -1,4 +1,13 @@
-MatchingTranslations:
-  enabled: false
 TemplateLength:
+  # Disable some checks
+  enabled: false
+  # Or configure options
+  max_length: 300
+  # Or ignore certain paths
+  ignore:
+    - snippets/icon-*
+  # Or change the severity (error|suggestion|style)
+  severity: suggestion
+  
+MatchingTranslations:
   enabled: false

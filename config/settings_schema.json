@@ -1321,9 +1321,33 @@
       },
       {
         "type": "text",
+        "id": "social_meta_link",
+        "label": "t:settings_schema.social-media.settings.social_meta_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_meta_link.info"
+      },
+      {
+        "type": "text",
         "id": "social_instagram_link",
         "label": "t:settings_schema.social-media.settings.social_instagram_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_instagram_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_threads_link",
+        "label": "t:settings_schema.social-media.settings.social_threads_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_threads_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter_link",
+        "label": "t:settings_schema.social-media.settings.social_twitter_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_twitter_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_x_link",
+        "label": "t:settings_schema.social-media.settings.social_x_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_x_link.info"
       },
       {
         "type": "text",
@@ -1339,9 +1363,9 @@
       },
       {
         "type": "text",
-        "id": "social_twitter_link",
-        "label": "t:settings_schema.social-media.settings.social_twitter_link.label",
-        "placeholder": "t:settings_schema.social-media.settings.social_twitter_link.info"
+        "id": "social_twitch_link",
+        "label": "t:settings_schema.social-media.settings.social_twitch_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_twitch_link.info"
       },
       {
         "type": "text",
@@ -1366,7 +1390,55 @@
         "id": "social_vimeo_link",
         "label": "t:settings_schema.social-media.settings.social_vimeo_link.label",
         "placeholder": "t:settings_schema.social-media.settings.social_vimeo_link.info"
-      }
+      },
+      {
+        "type": "text",
+        "id": "social_discord_link",
+        "label": "t:settings_schema.social-media.settings.social_discord_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_discord_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_reddit_link",
+        "label": "t:settings_schema.social-media.settings.social_reddit_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_reddit_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_whatsapp_link",
+        "label": "t:settings_schema.social-media.settings.social_whatsapp_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_whatsapp_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_telegram_link",
+        "label": "t:settings_schema.social-media.settings.social_telegram_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_telegram_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_wechat_link",
+        "label": "t:settings_schema.social-media.settings.social_wechat_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_wechat_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_bitbucket_link",
+        "label": "t:settings_schema.social-media.settings.social_bitbucket_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_bitbucket_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_gitlab_link",
+        "label": "t:settings_schema.social-media.settings.social_gitlab_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_gitlab_link.info"
+      },
+      {
+        "type": "text",
+        "id": "social_github_link",
+        "label": "t:settings_schema.social-media.settings.social_github_link.label",
+        "placeholder": "t:settings_schema.social-media.settings.social_github_link.info"
+      },
     ]
   },
   {

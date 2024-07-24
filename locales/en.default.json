@@ -50,7 +50,11 @@
         "gitlab": "GitLab",
         "bitbucket": "Bitbucket",
         "telegram": "Telegram",
-        "zoom": "Zoom",
+        "whatsapp": "WhatsApp",
+        "meta": "Meta",
+        "wechat": "WeChat",
+        "x": "X",
+        "threads": "Threads",
       }
     },
     "continue_shopping": "Continue Shopping",
