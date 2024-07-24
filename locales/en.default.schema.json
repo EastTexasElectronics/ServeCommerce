@@ -1,5 +1,4 @@
 /** 
-* This file is used for localization and defining labels, descriptions, and other text content for theme settings in a * specific language (in this case, English). 
 * This file is used for localization and defining Labels, descriptions, and other text Content for theme settings in a * specific language (in this case, English). 
 **/
 {
@@ -295,7 +294,7 @@
         },
         "social_telegram_link": {
           "label": "Telegram",
-          "info": "/"
+          "info": "https://telegram.com"
         },
         "social_github_link": {
           "label": "GitHub",
@@ -306,16 +305,16 @@
           "info": "https://www.linkedin.com"
         },
         "social_gitlab_link": {
-          "label": "TikTok",
-          "info": "https://tiktok.com"
+          "label": "GitLab",
+          "info": "https://gitlab.com"
         },
         "social_bitbucket_link": {
-          "label": "Tumblr",
-          "info": "https://tumblr.com"
+          "label": "BitBucket",
+          "info": "https://bitbucket.com"
         },
         "social_meta_link": {
-          "label": "Twitter",
-          "info": "https://twitter.com"
+          "label": "Meta",
+          "info": "https://meta.com"
         },
         "social_reddit_link": {
           "label": "Reddit",
@@ -328,6 +327,14 @@
         "social_whatsapp_link": {
           "label": "WhatsApp",
           "info": "https://whatsapp.com"
+        },
+        "social_wechat_link": {
+          "label": "WeChat",
+          "info": "https://wechat.com"
+        },
+        "social_threads_link": {
+          "label": "Threads",
+          "info": "https://threads.com"
         }
       }
     },
